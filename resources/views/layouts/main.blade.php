@@ -26,7 +26,7 @@
 			</ul>
 			<div class="flex flex-col md:flex-row items-center ">
 				<div class="relative mt-3 md:mt-0">
-					<input type="text" class="bg-gray-800 rounded-full w-64 py-1 focus:outline-none focus:shadow-outline" placeholder="Search">
+					<input type="text" class="bg-gray-800 rounded-full w-64 py-1 focus:outline-none focus:shadow-outline" placeholder="   Search">
 				</div>
 				<div class="md:ml-4 mt-3 md:mt-0">
 					<a href="#">

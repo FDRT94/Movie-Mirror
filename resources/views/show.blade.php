@@ -48,99 +48,119 @@
 
     <div class="movie-cast border-b border-gray-800">
         <div class="container mx-auto col px-4 py-16">
-			<h2 class="text-4xl font-semibold">Cast</h2>
-			<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-16">
-				<div class="mt-8">
-					<a href="#">
-						<img src="/img/parasite.jpg" alt="parasite"
-							class="hover:opacity-75 transition ease-in-out duration-150">
-					</a>
-					<div class="mt-2">
-						<a href="#" class="text-lg mt-2 hover:text-gray:300">Parasite</a>
-						<div class="flex item-center text-gray-400">
-							<span>star</span>
-							<span class="ml-1">85%</span>
-							<span class="mx-2">|</span>
-							<span>Feb 20, 2020</span>
-						</div>
-						<div class="text-gray-400">
-							Action, Thriller, Comedy
-						</div>
-					</div>
-				</div>
-				<div class="mt-8">
-					<a href="#">
-						<img src="/img/parasite.jpg" alt="parasite"
-							class="hover:opacity-75 transition ease-in-out duration-150">
-					</a>
-					<div class="mt-2">
-						<a href="#" class="text-lg mt-2 hover:text-gray:300">Parasite</a>
-						<div class="flex items-center text-gray-400 text-sm mt-1">
-							<span>star</span>
-							<span class="ml-1">85%</span>
-							<span class="mx-2">|</span>
-							<span>Feb 20, 2020</span>
-						</div>
-						<div class="text-gray-400">
-							Action, Thriller, Comedy
-						</div>
-					</div>
-				</div>
-				<div class="mt-8">
-					<a href="#">
-						<img src="/img/parasite.jpg" alt="parasite"
-							class="hover:opacity-75 transition ease-in-out duration-150">
-					</a>
-					<div class="mt-2">
-						<a href="#" class="text-lg mt-2 hover:text-gray:300">Parasite</a>
-						<div class="flex item-center text-gray-400">
-							<span>star</span>
-							<span class="ml-1">85%</span>
-							<span class="mx-2">|</span>
-							<span>Feb 20, 2020</span>
-						</div>
-						<div class="text-gray-400">
-							Action, Thriller, Comedy
-						</div>
-					</div>
-				</div>
-				<div class="mt-8">
-					<a href="#">
-						<img src="/img/parasite.jpg" alt="parasite"
-							class="hover:opacity-75 transition ease-in-out duration-150">
-					</a>
-					<div class="mt-2">
-						<a href="#" class="text-lg mt-2 hover:text-gray:300">Parasite</a>
-						<div class="flex item-center text-gray-400">
-							<span>star</span>
-							<span class="ml-1">85%</span>
-							<span class="mx-2">|</span>
-							<span>Feb 20, 2020</span>
-						</div>
-						<div class="text-gray-400">
-							Action, Thriller, Comedy
-						</div>
-					</div>
-				</div>
-				<div class="mt-8">
-					<a href="#">
-						<img src="/img/parasite.jpg" alt="parasite"
-							class="hover:opacity-75 transition ease-in-out duration-150">
-					</a>
-					<div class="mt-2">
-						<a href="#" class="text-lg mt-2 hover:text-gray:300">Parasite</a>
-						<div class="flex item-center text-gray-400">
-							<span>star</span>
-							<span class="ml-1">85%</span>
-							<span class="mx-2">|</span>
-							<span>Feb 20, 2020</span>
-						</div>
-						<div class="text-gray-400">
-							Action, Thriller, Comedy
-						</div>
-					</div>
-				</div>
-			</div>
+            <h2 class="text-4xl font-semibold">Cast</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-16">
+                <div class="mt-8">
+                    <a href="#">
+                        <img src="/img/actor1.jpg" alt="actor1"
+                            class="hover:opacity-75 transition ease-in-out duration-150">
+                    </a>
+                    <div class="mt-2">
+                        <a href="#" class="text-lg mt-2 hover:text-gray:300">Real Name</a>
+                        <div class="flex item-center text-gray-400">
+                            <span>John Doe</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8">
+                    <a href="#">
+                        <img src="/img/actor2.jpg" alt="actor2"
+                            class="hover:opacity-75 transition ease-in-out duration-150">
+                    </a>
+                    <div class="mt-2">
+                        <a href="#" class="text-lg mt-2 hover:text-gray:300">Real Name</a>
+                        <div class="flex item-center text-gray-400">
+                            <span>John Doe</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8">
+                    <a href="#">
+                        <img src="/img/actor3.jpg" alt="actor3"
+                            class="hover:opacity-75 transition ease-in-out duration-150">
+                    </a>
+                    <div class="mt-2">
+                        <a href="#" class="text-lg mt-2 hover:text-gray:300">Real Name</a>
+                        <div class="flex item-center text-gray-400">
+                            <span>John Doe</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8">
+                    <a href="#">
+                        <img src="/img/actor4.jpg" alt="actor4"
+                            class="hover:opacity-75 transition ease-in-out duration-150">
+                    </a>
+                    <div class="mt-2">
+                        <a href="#" class="text-lg mt-2 hover:text-gray:300">Real Name</a>
+                        <div class="flex item-center text-gray-400">
+                            <span>John Doe</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8">
+                    <a href="#">
+                        <img src="/img/actor5.jpg" alt="actor5"
+                            class="hover:opacity-75 transition ease-in-out duration-150">
+                    </a>
+                    <div class="mt-2">
+                        <a href="#" class="text-lg mt-2 hover:text-gray:300">Real Name</a>
+                        <div class="flex item-center text-gray-400">
+                            <span>John Doe</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="movie-cast border-b border-gray-800">
+        <div class="container mx-auto col-3 px-4 py-16">
+            <h2 class="text-4xl font-semibold">Images</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-16">
+                <div class="mt-8">
+                    <a href="#">
+                        <img src="/img/image1.jpg" alt="image1"
+                            class="hover:opacity-75 transition ease-in-out duration-150">
+                    </a>
+                </div>
+
+                <div class="mt-8">
+                    <a href="#">
+                        <img src="/img/image2.jpg" alt="image2"
+                            class="hover:opacity-75 transition ease-in-out duration-150">
+                    </a>
+                </div>
+
+                <div class="mt-8">
+                    <a href="#">
+                        <img src="/img/image3.jpg" alt="image3"
+                            class="hover:opacity-75 transition ease-in-out duration-150">
+                    </a>
+                </div>
+
+                <div class="mt-8">
+                    <a href="#">
+                        <img src="/img/image4.jpg" alt="image4"
+                            class="hover:opacity-75 transition ease-in-out duration-150">
+                    </a>
+                </div>
+
+                <div class="mt-8">
+                    <a href="#">
+                        <img src="/img/image5.jpg" alt="image5"
+                            class="hover:opacity-75 transition ease-in-out duration-150">
+                    </a>
+                </div>
+
+                <div class="mt-8">
+                    <a href="#">
+                        <img src="/img/image6.jpg" alt="image6"
+                            class="hover:opacity-75 transition ease-in-out duration-150">
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
