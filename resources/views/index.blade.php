@@ -25,11 +25,11 @@
             </div>
             <div class="mt-8">
                 <a href="#">
-                    <img src="/img/parasite.jpg" alt="parasite"
+                    <img src="/img/joker.jpg" alt="joker"
                         class="hover:opacity-75 transition ease-in-out duration-150">
                 </a>
                 <div class="mt-2">
-                    <a href="#" class="text-lg mt-2 hover:text-gray:300">Parasite</a>
+                    <a href="#" class="text-lg mt-2 hover:text-gray:300">Joker</a>
                     <div class="flex items-center text-gray-400 text-sm mt-1">
                         <span>star</span>
                         <span class="ml-1">85%</span>
@@ -43,11 +43,11 @@
             </div>
             <div class="mt-8">
                 <a href="#">
-                    <img src="/img/parasite.jpg" alt="parasite"
+                    <img src="/img/sonic.jpg" alt="sonic"
                         class="hover:opacity-75 transition ease-in-out duration-150">
                 </a>
                 <div class="mt-2">
-                    <a href="#" class="text-lg mt-2 hover:text-gray:300">Parasite</a>
+                    <a href="#" class="text-lg mt-2 hover:text-gray:300">Sonic</a>
                     <div class="flex item-center text-gray-400">
                         <span>star</span>
                         <span class="ml-1">85%</span>
@@ -61,11 +61,11 @@
             </div>
             <div class="mt-8">
                 <a href="#">
-                    <img src="/img/parasite.jpg" alt="parasite"
+                    <img src="/img/frozen2.jpg" alt="frozen2"
                         class="hover:opacity-75 transition ease-in-out duration-150">
                 </a>
                 <div class="mt-2">
-                    <a href="#" class="text-lg mt-2 hover:text-gray:300">Parasite</a>
+                    <a href="#" class="text-lg mt-2 hover:text-gray:300">Frozen II</a>
                     <div class="flex item-center text-gray-400">
                         <span>star</span>
                         <span class="ml-1">85%</span>
