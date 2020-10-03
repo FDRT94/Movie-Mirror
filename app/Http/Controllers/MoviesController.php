@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class MoviesController extends Controller
 {
@@ -13,7 +14,13 @@ class MoviesController extends Controller
      */
     public function index()
     {
-        return view('index');
+		$popularMovies = Http::withToken('eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzMjgzNTViY2RmYWUzNGE2ZTQ3YTM2YmExZmFkMWFjOCIsInN1YiI6IjVmNzYzNTlkODc0MWM0MDAzODY4YTYyMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ZzY0BrybSKc1uylB_-l6Km8_PLo6B_JB7NCY__4_488')
+            ->get('https://api.themoviedb.org/3/movie/popular')
+            ->json()['results'];
+
+		dump($popularMovies);
+
+		return view('index');
     }
 
     /**
