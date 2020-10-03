@@ -16,11 +16,22 @@ class MoviesController extends Controller
     {
 		$popularMovies = Http::withToken('eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzMjgzNTViY2RmYWUzNGE2ZTQ3YTM2YmExZmFkMWFjOCIsInN1YiI6IjVmNzYzNTlkODc0MWM0MDAzODY4YTYyMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ZzY0BrybSKc1uylB_-l6Km8_PLo6B_JB7NCY__4_488')
             ->get('https://api.themoviedb.org/3/movie/popular')
-            ->json()['results'];
-
+			->json()['results'];
+			
+		$genresArray = Http::withToken('eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzMjgzNTViY2RmYWUzNGE2ZTQ3YTM2YmExZmFkMWFjOCIsInN1YiI6IjVmNzYzNTlkODc0MWM0MDAzODY4YTYyMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ZzY0BrybSKc1uylB_-l6Km8_PLo6B_JB7NCY__4_488')
+		->get('https://api.themoviedb.org/3/genre/movie/list')
+		->json()['genres'];	
+	
+		$genres = collect($genresArray)->mapWithKeys(function ($genre){
+			return [$genre['id'] => $genre['name']];
+		});
+	
 		dump($popularMovies);
 
-		return view('index');
+		return view('index', [
+			'popularMovies' => $popularMovies,
+			'genres' => $genres,
+		]);
     }
 
     /**
