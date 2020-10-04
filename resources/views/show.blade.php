@@ -28,144 +28,67 @@
                 <h4 class="text-white font-semibold">Featured Cast</h4>
                 <div class="flex mt-4">
                     @foreach($movie['credits']['crew'] as $crew)
-						@if ($loop->index < 2) 
-					<div class="mr-8">
+                    @if ($loop->index < 2) <div class="mr-8">
                         <div> {{ $crew['name'] }}</div>
                         <div class="text-sm text-gray-400"> {{ $crew['job'] }}</div>
-                	</div>
-                		@endif
-                	@endforeach
+                </div>
+                @endif
+                @endforeach
             </div>
         </div>
 
-		@if (count($movie['videos']['results']) > 0)
-			<div class="mt-12">
-			<a href="https://youtube.com/watch?v={{ $movie['videos']['results']['0']['key'] }}"
-					class="flex inline-flex items-center bg-orange-500 text-gray-900 
+        @if (count($movie['videos']['results']) > 0)
+        <div class="mt-12">
+            <a href="https://youtube.com/watch?v={{ $movie['videos']['results']['0']['key'] }}" class="flex inline-flex items-center bg-orange-500 text-gray-900 
 					rounded font-semibold px-5 py-4 hover:bg-orange-600 traisition ease-in-out duration-150">
-					<span class="ml-2">Play Trailer</span>
-			</a>
-			</div>
-		@endif
+                <span class="ml-2">Play Trailer</span>
+            </a>
+        </div>
+        @endif
 
         <div class="movie-cast border-b border-gray-800">
             <div class="container mx-auto col px-4 py-16">
                 <h2 class="text-4xl font-semibold">Cast</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-16">
-                    <div class="mt-8">
+
+                    @foreach ($movie['credits']['cast'] as $cast)
+						@if ($loop->index < 5) 
+						<div class="mt-8">
                         <a href="#">
-                            <img src="/img/actor1.jpg" alt="actor1"
+						<img src="{{ 'https://image.tmdb.org/t/p/w300/'.$cast['profile_path'] }}" alt="actor"
                                 class="hover:opacity-75 transition ease-in-out duration-150">
                         </a>
                         <div class="mt-2">
-                            <a href="#" class="text-lg mt-2 hover:text-gray:300">Real Name</a>
+                            <a href="#" class="text-lg mt-2 hover:text-gray:300">e</a>{{ $cast['name'] }}
                             <div class="flex item-center text-gray-400">
-                                <span>John Doe</span>
+                                <span>{{ $cast['character'] }}</span>
                             </div>
-                        </div>
-                    </div>
-                    <div class="mt-8">
-                        <a href="#">
-                            <img src="/img/actor2.jpg" alt="actor2"
-                                class="hover:opacity-75 transition ease-in-out duration-150">
-                        </a>
-                        <div class="mt-2">
-                            <a href="#" class="text-lg mt-2 hover:text-gray:300">Real Name</a>
-                            <div class="flex item-center text-gray-400">
-                                <span>John Doe</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-8">
-                        <a href="#">
-                            <img src="/img/actor3.jpg" alt="actor3"
-                                class="hover:opacity-75 transition ease-in-out duration-150">
-                        </a>
-                        <div class="mt-2">
-                            <a href="#" class="text-lg mt-2 hover:text-gray:300">Real Name</a>
-                            <div class="flex item-center text-gray-400">
-                                <span>John Doe</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-8">
-                        <a href="#">
-                            <img src="/img/actor4.jpg" alt="actor4"
-                                class="hover:opacity-75 transition ease-in-out duration-150">
-                        </a>
-                        <div class="mt-2">
-                            <a href="#" class="text-lg mt-2 hover:text-gray:300">Real Name</a>
-                            <div class="flex item-center text-gray-400">
-                                <span>John Doe</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-8">
-                        <a href="#">
-                            <img src="/img/actor5.jpg" alt="actor5"
-                                class="hover:opacity-75 transition ease-in-out duration-150">
-                        </a>
-                        <div class="mt-2">
-                            <a href="#" class="text-lg mt-2 hover:text-gray:300">Real Name</a>
-                            <div class="flex item-center text-gray-400">
-                                <span>John Doe</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="movie-cast border-b border-gray-800">
-            <div class="container mx-auto col-3 px-4 py-16">
-                <h2 class="text-4xl font-semibold">Images</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-16">
-                    <div class="mt-8">
-                        <a href="#">
-                            <img src="/img/image1.jpg" alt="image1"
-                                class="hover:opacity-75 transition ease-in-out duration-150">
-                        </a>
-                    </div>
-
-                    <div class="mt-8">
-                        <a href="#">
-                            <img src="/img/image2.jpg" alt="image2"
-                                class="hover:opacity-75 transition ease-in-out duration-150">
-                        </a>
-                    </div>
-
-                    <div class="mt-8">
-                        <a href="#">
-                            <img src="/img/image3.jpg" alt="image3"
-                                class="hover:opacity-75 transition ease-in-out duration-150">
-                        </a>
-                    </div>
-
-                    <div class="mt-8">
-                        <a href="#">
-                            <img src="/img/image4.jpg" alt="image4"
-                                class="hover:opacity-75 transition ease-in-out duration-150">
-                        </a>
-                    </div>
-
-                    <div class="mt-8">
-                        <a href="#">
-                            <img src="/img/image5.jpg" alt="image5"
-                                class="hover:opacity-75 transition ease-in-out duration-150">
-                        </a>
-                    </div>
-
-                    <div class="mt-8">
-                        <a href="#">
-                            <img src="/img/image6.jpg" alt="image6"
-                                class="hover:opacity-75 transition ease-in-out duration-150">
-                        </a>
-                    </div>
+						</div>
+						@endif
+                    @endforeach
                 </div>
             </div>
         </div>
     </div>
+
+
+    <div class="movie-images">
+        <div class="container mx-auto col-3 px-4 py-16">
+            <h2 class="text-4xl font-semibold">Images</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-16">
+			@foreach ( $movie['images']['backdrops'] as $image ))
+				@if ($loop->index < 9)
+                <div class="mt-8">
+                    <a href="#">
+                        <img src="{{'https://image.tmdb.org/t/p/w500/'.$image['file_path'] }}" alt="image"
+                            class="hover:opacity-75 transition ease-in-out duration-150">
+                    </a>
+				</div>
+				@endif
+			@endforeach
+            </div>
+        </div>
+    </div>
 </div>
-</div>
+
 @endsection
