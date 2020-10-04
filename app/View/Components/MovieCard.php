@@ -6,7 +6,6 @@ use Illuminate\View\Component;
 
 class MovieCard extends Component
 {
-
 	public $movie;
 	public $genres;
 
