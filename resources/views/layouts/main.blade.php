@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Movie App</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <livewire:styles>
 </head>
 
 <body class="font-sans bg-gray-900 text-white">
@@ -25,21 +27,18 @@
                     <a href="#" class="hover:gray-300">Actors</a>
                 </li>
             </ul>
-            <div class="flex flex-col md:flex-row items-center ">
-                <div class="relative mt-3 md:mt-0">
-                    <input type="text"
-                        class="bg-gray-800 rounded-full w-64 py-1 focus:outline-none focus:shadow-outline"
-                        placeholder="   Search">
-                </div>
-                <div class="md:ml-4 mt-3 md:mt-0">
-                    <a href="#">
-                        {{-- <img src="/img/avatar.jpg" alt="avatar" class="rounded-full w-8"> --}}
-                    </a>
-                </div>
-            </div>
-        </div>
 
+            <div class="flex flex-col md:flex-row items-center">
+                <livewire:search-dropdown>
+				<div class="md:ml-4 mt-3 md:mt-0">
+					<a href="#">
+						<img src="/img/avatar.jpg" alt="avatar" class="rounded-full w-8 h-8">
+					</a> 
+				</div>
+			</div>
+		</div>
     </nav>
     @yield('content')
+    <livewire:scripts />
 </body>
 </html>
