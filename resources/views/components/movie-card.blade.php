@@ -13,7 +13,10 @@
         </div>
         <div class="text-gray-400">
             @foreach ($movie['genre_ids'] as $genre)
-            {{ $genres->get($genre) }}@if(!$loop->last), @endif
+			{{ $genres->get($genre) }}
+			@if(!$loop->last), 
+			
+			@endif
             @endforeach
         </div>
     </div>
