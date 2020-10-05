@@ -14,15 +14,15 @@ class MoviesController extends Controller
      */
     public function index()
     {
-		$popularMovies = Http::withToken('eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzMjgzNTViY2RmYWUzNGE2ZTQ3YTM2YmExZmFkMWFjOCIsInN1YiI6IjVmNzYzNTlkODc0MWM0MDAzODY4YTYyMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ZzY0BrybSKc1uylB_-l6Km8_PLo6B_JB7NCY__4_488')
+		$popularMovies = Http::withToken(config('services.tmdb.token'))
             ->get('https://api.themoviedb.org/3/movie/popular')
 			->json()['results'];
 
-		$nowPlayingMovies = Http::withToken('eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzMjgzNTViY2RmYWUzNGE2ZTQ3YTM2YmExZmFkMWFjOCIsInN1YiI6IjVmNzYzNTlkODc0MWM0MDAzODY4YTYyMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ZzY0BrybSKc1uylB_-l6Km8_PLo6B_JB7NCY__4_488')
+		$nowPlayingMovies = Http::withToken(config('services.tmdb.token'))
 		->get('https://api.themoviedb.org/3/movie/now_playing')
 		->json()['results'];
 			
-		$genresArray = Http::withToken('eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzMjgzNTViY2RmYWUzNGE2ZTQ3YTM2YmExZmFkMWFjOCIsInN1YiI6IjVmNzYzNTlkODc0MWM0MDAzODY4YTYyMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ZzY0BrybSKc1uylB_-l6Km8_PLo6B_JB7NCY__4_488')
+		$genresArray = Http::withToken(config('services.tmdb.token'))
 		->get('https://api.themoviedb.org/3/genre/movie/list')
 		->json()['genres'];	
 	
@@ -68,7 +68,7 @@ class MoviesController extends Controller
      */
     public function show($id)
     {
-		$movie = Http::withToken('eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzMjgzNTViY2RmYWUzNGE2ZTQ3YTM2YmExZmFkMWFjOCIsInN1YiI6IjVmNzYzNTlkODc0MWM0MDAzODY4YTYyMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ZzY0BrybSKc1uylB_-l6Km8_PLo6B_JB7NCY__4_488')
+		$movie = Http::withToken(config('services.tmdb.token'))
             ->get('https://api.themoviedb.org/3/movie/'.$id.'?append_to_response=credits,videos,images')
 			->json();
 
