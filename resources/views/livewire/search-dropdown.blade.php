@@ -1,7 +1,11 @@
-<div class="relative mt-3 md:mt-0">
+<div class="relative mt-3 md:mt-0" x-data:"{ isOpen = true }">
     <input wire:model.debounce.500ms="search" type="text"
         class="bg-gray-800 text-sm rounded-full w-64 px-4 pl-8 py-1 focus:outline-none focus:shadow-outline"
-        placeholder="Search">
+        placeholder="Search"
+        @focus="isOpen = true"
+        @keydown.escape.window="isOpen = false"
+        @keydown.shift.tab="isOpen = false"
+        >
     <div class="absolute top-0">
         <svg class="fill-current w-4 text-gray-500 mt-2 ml-2" viewBox="0 0 24 24">
             <path class="heroicon-ui"
@@ -16,7 +20,7 @@
         @if ($searchResults->count() > 0)
         <ul>
             @foreach ($searchResults as $result)
-            <li class="border-b border-gray-700">
+            <li class="z-50 border-b border-gray-700">
                 <a href="{{ route('movies.show', $result['id']) }}"
                     class="block hover:bg-gray-700 flex items-center px-3 py-3 ">
                     {{-- if no img available show placeholder img --}}
