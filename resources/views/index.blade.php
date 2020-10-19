@@ -9,16 +9,17 @@
             <x-movie-card :movie="$movie" :genres="$genres" />
             @endforeach
         </div>
-    </div>
+    </div> <!-- end populair movies  -->
+        
 
     <div class="populair-movies">
         <h2 class="uppercase tracking-wider text-orange-500 text-lg font-semibold">Now Playing</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-16">
             @foreach ($nowPlayingMovies as $movie)
-            <x-movie-card :movie="$movie" :genres="$genres" />
+                <x-movie-card :movie="$movie" />
             @endforeach
         </div>
-    </div>
+    </div>  <!-- end now playing movies !-->
 </div>
 
 @endsection
