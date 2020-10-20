@@ -25,7 +25,7 @@
                     <a href="#" class="hover:gray-300">Tv Shows</a>
                 </li>
                 <li class="md:ml-16 mt-3 md:mt-0">
-                    <a href="#" class="hover:gray-300">Actors</a>
+                <a href="{{ route('actors.index') }}" class="hover:gray-300">Actors</a>
                 </li>
             </ul>
 
@@ -41,5 +41,6 @@
     </nav>
     @yield('content')
     <livewire:scripts />
+    @yield('scripts')
 </body>
 </html>

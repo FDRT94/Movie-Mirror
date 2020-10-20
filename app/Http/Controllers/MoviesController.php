@@ -27,48 +27,14 @@ class MoviesController extends Controller
 		$genres = Http::withToken(config('services.tmdb.token'))
 		->get('https://api.themoviedb.org/3/genre/movie/list')
 		->json()['genres'];	
-	
-		// $genres = collect($genresArray)->mapWithKeys(function ($genre){
-		// 	return [$genre['id'] => $genre['name']];
-		// });
-	
-		// dump($nowPlayingMovies);
 
-		// return view('index', [
-		// 	'popularMovies' => $popularMovies,
-		// 	'nowPlayingMovies' => $nowPlayingMovies,
-		// 	'genres' => $genres,
-        // ]);
-        
         $viewmodel = new MoviesViewModel(
             $popularMovies,
 			$nowPlayingMovies,
 			$genres,
         );
 
-
-        return view('index', $viewmodel);
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
+        return view('movies.index', $viewmodel);
     }
 
     /**
@@ -85,40 +51,6 @@ class MoviesController extends Controller
 
         $viewmodel = new MovieViewModel($movie);
 
-		return view('show', $viewmodel);
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+		return view('movies.show', $viewmodel);
     }
 }
