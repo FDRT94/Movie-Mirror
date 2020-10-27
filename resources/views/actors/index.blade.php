@@ -7,13 +7,13 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-16">
             @foreach ($popularActors as $actor)
             <div class="actors mt-8">
-                <a href="#">
+            <a href="{{ route('actors.show', $actor['id']) }}">
                 <img src="{{ $actor['profile_path']}}" 
                     alt="profile_image" 
                     class="hover:opacity-75 transition ease-in-out duration-150">
                 </a>
                 <div class="mt-2">
-                <a href="#" class="text-lg hover:text-gray-300">{{ $actor['name'] }}</a>
+                <a href="{{ route('actors.show', $actor['id']) }}" class="text-lg hover:text-gray-300">{{ $actor['name'] }}</a>
                 <div class="text-sm truncate text-gray-400"> {{ $actor['known_for' ]}}</div>
                 </div>  
             </div>
@@ -21,8 +21,10 @@
         </div>
     </div> <!-- end popular actors  -->
 
+    {{-- infinite scroll pagination --}}
     <div class="page-load-status my-8">
         <div class="flex justify-center">
+            {{--  loading spinner  --}}
             <div class="infinite-scroll-request spinner my-8 text-4xl">&nbsp;</div>
         </div>
         <p class="infinite-scroll-last">End of content</p>
