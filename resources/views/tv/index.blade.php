@@ -10,14 +10,16 @@
             @endforeach
         </div>
     </div> <!-- end populair tv  -->
-        
+
 
     <div class="populair-tv">
         <h2 class="uppercase tracking-wider text-orange-500 text-lg font-semibold">Top Rated Shows</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-16">
-            
+            @foreach ($topRatedTv as $tvshow)
+                <x-tv-card :tvshow="$tvshow" />
+            @endforeach
         </div>
-    </div>  <!-- end now playing tv !-->
+    </div> <!-- end now playing tv !-->
 </div>
 
 @endsection

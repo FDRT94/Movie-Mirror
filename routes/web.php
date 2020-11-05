@@ -13,7 +13,7 @@ Route::get('/movies/{id}', [MoviesController::class, 'show'])->name('movies.show
 // Actor Routes
 Route::get('/actors', [ActorsController::class, 'index'])->name('actors.index');
 Route::get('/actors/page/{page?}', [ActorsController::class, 'index']);
-Route::get('/actors/{actor}', [ActorsController::class, 'show'])->name('actors.show');
+Route::get('/actors/{id}', [ActorsController::class, 'show'])->name('actors.show');
 
 // tv routes
 

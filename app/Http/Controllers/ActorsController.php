@@ -45,8 +45,8 @@ class ActorsController extends Controller
             ->get('https://api.themoviedb.org/3/person/'.$id.'/external_ids')	
             ->json();
 
-            $credits = Http::withToken(config('services.tmdb.token'))	
-            ->get('https://api.themoviedb.org/3/person/'.$id.'/combined_credits')	
+            $credits = Http::withToken(config('services.tmdb.token'))
+            ->get('https://api.themoviedb.org/3/person/'.$id.'/combined_credits')
             ->json();
 
         $viewModel = new ActorViewModel($actor, $social, $credits);
