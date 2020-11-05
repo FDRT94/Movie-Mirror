@@ -18,7 +18,7 @@ class TvViewModel extends ViewModel
         $this->genres = $genres;
     }
 
-    public function popular()
+    public function popularTv()
     {
         return $this->formatTv($this->popularTv);
     }
